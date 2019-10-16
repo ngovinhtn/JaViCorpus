@@ -27,5 +27,5 @@ awk 'FILENAME=="lines.date" { arr[$0]++} FILENAME=="glosbe_train.filtered.onecha
 awk 'FILENAME=="lines.date" { arr[$0]++} FILENAME=="glosbe_train.filtered.onechar.vi" {if(!(FNR in arr)) {print $0}}' lines.date glosbe_train.filtered.onechar.vi > glosbe_train.filtered.vi
 
 ### Standardize unicode
-python /project/wmt2012/user/tha/ngovinh/tools/vietnameseNormUniStd.py glosbe_train.filtered.vi glosbe_train.filtered.unicode.vi
+python ../tools/vietnameseNormUniStd.py glosbe_train.filtered.vi glosbe_train.filtered.unicode.vi
 mv glosbe_train.filtered.unicode.vi glosbe_train.filtered.vi
