@@ -1,0 +1,15 @@
+ Corpus Name: QED
+     Package: QED.ja-vi in Moses format
+     Website: http://opus.nlpl.eu/QED-v2.0a.php
+     Release: v2.0a
+Release date: Sat Jul  6 03:13:16 EEST 2019
+     License: The QED Corpus is made public for RESEARCH purpose only.
+   Copyright: The QED Corpus is made public for RESEARCH purpose only.
+
+This corpus is part of OPUS - the open collection of parallel corpora
+OPUS Website: http://opus.nlpl.eu
+
+Please cite the following article if you use any part of the corpus in your own work: J. Tiedemann, 2012, Parallel Data, Tools and Interfaces in OPUS. In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012)
+
+The QCRI Educational Domain Corpus (formerly QCRI AMARA Corpus) is an open multilingual collection of subtitles for educational videos and lectures collaboratively transcribed and translated over the AMARA web-based platform.Developed by: Qatar Computing Research Institute, Arabic Language Technologies GroupThe QED Corpus is made public for RESEARCH purpose only.The corpus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Copyright Qatar Computing Research Institute. All rights reserved.
+An earlier release has been published at http://alt.qcri.org/resources/qedcorpus/. This updated version is provided by Ahmed Abdelali , Paco Guzman , Hassan Sajjad 
