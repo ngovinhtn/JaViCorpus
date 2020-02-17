@@ -1,0 +1,568 @@
+thứ mà tôi sẽ trình bày đến các bạn trước , một cách nhanh nhất có thể là một công trình cơ bản , một công nghệ mới mà chúng tôi đã mang đến Microsoft trong cuộc sát nhập cách đây một năm . đây là Seadragon .
+là một môi trường mà bạn có thể tương tác trong phạm vi xa hoặc gần với nhiều loại dữ liệu hình ảnh .
+chúng ta đang nhìn thấy rất nhiều Gb ảnh điện tử ở đây và gần như đang liên tục thu hẹp lại , xoay trái phải , xếp đặt lại chúng bằng mọi cách mà ta muốn Và không quan trọng chuyện lượng thông tin ta cần đến lớn bao nhiêu , những bộ sưu tập này và những hình ảnh đó lớn bao nhiêu .
+tất cả đều là những hình ảnh chụp từ máy ảnh số , nhưng cái này chẳng hạn , là bản quét từ Thư viện Quốc hội , và có khối lượng khoảng 300 mega điểm ảnh .
+những cũng chẳng có gì khác biệt vì điều duy nhất làm giới hạn khả năng của một hệ thống như thế này chính là số điểm ảnh trên màn hình của bạn tại bất cứ thời điểm nào . kiến trúc của nó cũng rất đa dạng .
+đây là một quyển sách , ví dụ về dữ liệu không hình ảnh .
+đây là quyển Ngôi nhà lạnh lẽo của Dickens . mỗi cột là một chương .
+để chứng minh với các bạn rằng đây chính là một văn bản và không phải là hình ảnh , chúng ta có thể làm như thế này , để thực sự thấy rằng đây là phần trình bày của một văn bản ; nó không phải là một bức tranh .
+có thể đây là một cách để đọc một quyển sách điện tử Tôi không khuyến khích cách này .
+đây là một trường hợp thực tế hơn . đây là một số báo của tờ The Guardian .
+mỗi bức ảnh to bắt đầu một mục .
+và nó thực sự mang lại cho bạn sự hứng khởi và vui vẻ khi đọc một tờ báo thực sự và là một phương tiện đa dạng xuyên suốt .
+chúng tôi đã làm thay đổi một chút với góc của tờ báo The Guardian này .
+chúng tôi đã tạo ra một mẩu quảng cáo với độ phân giải cao - - cao hơn hẳn cái thường có ở quảng cáo thông thường - - và chúng tôi đính thêm nhiều nội dung khác .
+nếu bạn muốn xem các nét đặc trưng của chiếc xe này , bạn có thể xem ở đây .
+cũng có thể xem các mẫu khác , thậm chí cả đặc tính kĩ thuật .
+và điều này mang đến một vài ý tưởng về việc vượt qua giới hạn trên màn hình .
+chúng tôi mong rằng điều này có nghĩa là sẽ không còn các quảng cáo dạng pop - up và các dạng tương tự - - chúng không cần thiết .
+tất nhiên , bản đồ là một trong những ứng dụng thiết yếu cho công nghệ dạng này .
+và tôi sẽ không dành thời gian nói nhiều về nói ngoài việc nói rằng chúng tôi cũng đóng góp vào lĩnh vực này .
+nhưng đó là những con đường ở nước Mỹ được xếp chồng trên bản đồ của NASA.
+nên hãy kéo lên , bây giờ , xem một thứ khác .
+nó đã có ở trên trang web và bạn có thể tìm hiểu thêm .
+đây là một dự án tên gọi Photosynth , kết hợp hai công nghệ khác nhau .
+một trong số đó là Seadragon và công nghệ còn lại là một nghiên cứu tầm nhìn điện tử bởi Noah Snavely , sinh viên cao học của trường đại học Washington , đồng chỉ đạo bởi Steve Seitz ở UW và Rick Szeliski ở Trung tâm nghiên cứu Microsoft . một sự hợp tác rất tuyệt vời .
+dự án này đã có trên mạng . được cấp nguồn bởi Seadragon .
+bạn có thể thấy khi chúng tôi tiến hành thử những góc nhìn này , khi chúng tôi lướt qua các hình ảnh và có sự trải nghiệm về sự phân giải nhiều lớp .
+nhưng sự sắp đặp không gian của các hình ảnh ở đây rất có ý nghĩa .
+các thuật toán máy tính đã xắp xếp những hình ảnh này cùng nhau .
+và chúng tương ứng với không gian thật , trong đó những bức hình này - - tất cả được chụp gần Grassi Lakes ở Canadian Rockies - - Giờ các bạn có thể thấy ở đây những yếu tố của slide - show được ổn định hoặc toàn bộ hình ảnh , và những thứ này được liên hệ không gian với nhau .
+tôi không chắc mình có đủ thời gian để trình bày về các môi trường khác .
+có một vài môi trường với nhiều không gian hơn rất nhiều .
+tôi muốn đề cập thẳng đến một trong những bộ dữ liệu nguyên bản của Noah - - có nguồn gốc từ một mẫu nguyên thủy của Photosynth mà chúng tôi bắt đầu nghiên cứu lần đầu vào mùa hè - - để trình bày cho các bạn những gì tôi nghĩ là điểm nút đằng sau công nghệ này , công nghệ Photosynth . và nó thực sự không rõ rệt nếu chỉ nhìn vào những môi trường được tạo dựng trên trang web .
+chúng tôi đã phải lo lắng về luật sư và những điều khác .
+đây là bản tái thiết nhà thờ Notre Dame đã được làm hoàn toàn bằng máy tính từ những hình ảnh lấy từ Flickr . bạn chỉ cần đánh " Notre Dame " vào Flickr , và bạn có thể thấy hình ảnh những cậu sinh viên mặc áo phông , hoặc ảnh của trường và nhiều nữa . và mỗi hình nón màu cam này báo hiệu một hình ảnh được coi là thuộc mẫu hình này .
+và đây là tất cả những hình ảnh lấy từ Flickr , và chúng được liên kết không gian theo cách này .
+chúng ta chỉ cần tìm hiểu chúng một cách rất đơn giản .
+.
+bạn biết đấy , tôi chưa từng nghĩ rằng cuối cùng mình lại làm việc ở Microsoft .
+và thật phấn khởi khi được đón nhận như thế này .
+.
+tôi nghĩ các bạn có thể thấy ở đây có rất nhiều các loại máy ảnh : nó có tất cả từ máy ảnh điện thoại đến máy SLR chuyên nghiệp , một số lớn trong chúng được cài vào trong môi trường này .
+và nếu có thể , tôi sẽ tìm những loại kì cục nhất .
+có rất nhiều loại được bít kín bởi các mặt , và nhiều hơn nữa .
+vài nơi trong này thực ra đã có một series các bức ảnh - - chúng ta bắt đầu .
+đây là một bức ảnh của Notre Dame được đăng kí đúng .
+chúng ta có thể khám phá bức ảnh này để có cái nhìn của môi trường này .
+ý chính ở đây là chúng ta có thể làm những điều tương tự với môi trường xã hội . giờ nó đang lấy dữ liệu từ tất cả mọi người - - từ một bộ nhớ về hình ảnh trái đất và nối chúng lại với nhau .
+tất cả những bức ảnh đó được nối lại với nhau và nó tạo nên những thứ còn tuyệt vời hơn tất cả các phần góp lại .
+giờ ta có một mẫu mô phỏng toàn bộ Trái đất .
+hãy coi nó như bản thêm của chương trình Trái đất Ảo của Stepehn Lawler .
+và đây là thứ mà càng trở nên phức tạp khi người ta sử dụng , và lợi ích từ nó càng trở nên lớn hơn cho người dùng .
+những bức ảnh của người dùng sẽ được đính với dữ liệu dang meta khi một người khác nhập vào .
+nếu có ai đó có thể tag tất cả những vị thánh này và điền thông tin về họ , thì bức ảnh về nhà thờ Notre Dame của tôi sẽ cập nhật những thông tin này luôn , và tôi có thể dùng nó như điểm vào để lướt vào không gian đó , dữ liệu đó , sử dụng hình ảnh của những người khác , và thực hiện thao tác xuyên mô hình và xuyên mạng lưới người xử dụng .
+và tất nhiên , sản phẩm đi kèm sau đó là những mô hình giàu tính hình ảnh về những khu vực thú vị của thế giới , được thu thập không chỉ từ những ảnh chụp từ trên máy bay hay vệ tinh mà còn từ bộ nhớ có tính năng thu thập dữ liệu .
+cảm ơn các bạn rất nhiều .
+Chris Anderson : không biết tôi hiểu có đúng không ? rằng điều mà phần mềm của ngài đang cho phép , đó là tại một thời điểm nào đó , trong vòng vài năm tới , tất cả những bức ảnh được chia sẻ bởi bất cứ ai trên thế giới chúng sẽ được kết nối với nhau ?
+Baa : đúng vậy . những gì phầm mềm này là để khám phá .
+nó tạo nên những siêu kết nối giữa những hình ảnh .
+và nó làm điều đó dựa trên nội dung bên trong bức ảnh .
+và điều đó làm bạn thực sự phấn khích khi nghĩ đến những thông tin phong phú mà những hình ảnh này có .
+chẳng hạn khi bạn thực hiện lệnh tìm kiếm hình ảnh trên mạng , bạn gõ vào những cụm từ , và những từ khóa trên trang web chứa rất nhiều thông tin về bức ảnh đó .
+giờ , nếu bức ảnh đó được kết nối với tất cả những bức ảnh của bạn thì sao ?
+thì khối lượng của liên kết ngữ nghĩa và khối lượng thông tin phong phú kèm với nó là rất lớn . đây chính là hiệu ứng mạng lưới điển hình .
+ca : Blaise , điều này thực sự kì diệu . xin chúc mừng .
+Baa : cảm ơn rất nhiều .
+tôi muốn mở đầu với việc yêu cầu bạn thử nghĩ lại khi bạn còn là một đứa trẻ , đùa nghịch với hình khối .
+bạn biết cách chạm và cầm , đưa nó lên và di chuyển nó , thực sự bạn đã học cách nghĩ và giải quyết vấn đề thông qua việc hiểu và điều khiển mối liên hệ trong không gian .
+suy luận không gian được gắn kết sâu xa với cách chúng ta hiểu về thế giới rộng lớn xung quanh .
+bởi thế , một nhà khoa học máy tính được truyền cảm hứng bởi việc tương tác với vật thể - - cùng với người hướng dẫn Pattie , và bạn cùng làm là Jeevan Kalanithi - - Tôi bắt đầu tự hỏi - - điều gì sẽ xảy ra nếu chúng ta sử dụng máy tính , thay vì có con trỏ chuột chạy vòng quanh màn hình phẳng , điều gì sẽ xảy ra nếu chúng ta có thể cầm bẳng cả 2 tay và nắm lấy thông tin hữu hình , sắp xếp chúng theo cách chúng ta muốn ?
+câu hỏi này rất hấp dẫn và chúng tôi quyết định tìm kiếm câu trả lời , bằng việc làm nên Siftables .
+nói ngắn gọn , Siftables là một máy tính tác động lẫn nhau có kích thước bằng cái bánh quy .
+chúng có thể được di chuyển bằng tay , chúng có thể cảm nhận lẫn nhau , cảm nhận sự chuyển động , và chúng có màn hình cùng với sóng wireless .
+quan trọng nhất , chúng là hữu hình , như là viên gạch , bạn có thể di chuyển chúng bằng cách nắm lấy chúng .
+và Siftables là một ví dụ cho hệ sinh thái mới gồm những dụng cụ để điều khiển thông tin số .
+và những công cụ đó hữu hình , nhận biết sự chuyển động , và nhận biết lẫn nhau , và biết được cách mà ta di chuyển chúng , chúng ta có thể bắt đầu khám phá một vài cách tương tác mới .
+vậy , tôi sẽ bắt đầu với một ví dụ đơn giản .
+Siftable được cấu hình để hiển thị video , và nếu tôi nghiêng nó theo một hướng , nó sẽ xoay video như thế này , nếu tôi nghiêng theo hướng khác , nó xoay ngược lại .
+và những khối tương tác này nhận biết lẫn nhau .
+vậy nên nếu tôi đặt chúng cạnh nhau , chúng giao nhau .
+nếu chúng được đặt vòng quanh , chúng nhận biết điều đó , có thể có một chút bối rối .
+và chúng cảm nhận được chuyển động và độ nghiêng .
+một trong những hệ quả thú vị của tương tác này , chúng tôi nhận thấy là chúng tôi có thể dùng những cử chỉ hằng ngày trên dữ liệu , như là đổ màu giống như cách chúng ta đổ nước .
+trong trường hợp này , chúng tôi lấy 3 Siftables được cấu hình như là những hũ màu và tôi có thể dùng chúng để đổ màu vào miếng chính giữa , nơi mà màu sắc hòa trộn .
+nếu ta quá tay , ta có thể đổ màu ngược lại .
+cũng có vài khả năng là Siftables sẽ được dùng trong việc giáo dục , như là ngôn ngữ , toán học và trò chơi logic khi mà chúng ta muốn cho mọi người khả năng thử mọi thứ thật nhanh , và có kết quả ngay lập tức .
+vậy nên tôi - - Đây là chuỗi Fibonacci mà tôi tạo ra với phép tính đơn giản .
+và ở đây tôi có trò chơi xếp chữ , hỗn hợp giữa Scrabble và Boggle .
+cơ bản là , trong mỗi vòng bạn có một ký tự ngẫu nhiên trên mỗi miếng Siftable , và khi bạn tạo thành từ , nó kiểm tra từ đó trong từ điển .
+sau khoảng 30 giây , ký tự trên mỗi khối vuông thay đổi , và bạn có một tập ký tự mới và cố gắng sắp thành những từ khác .
+cám ơn .
+có một vài trẻ em đến tham quan Media Lab , và tôi thử để cho lũ trẻ chơi với Siftable , và quay video .
+bọn trẻ thật sự thích nó .
+và , một trong những thú vị của ứng dụng này là bạn không cần phải đưa hướng dẫn cho người chơi .
+mọi thứ bạn cần nói là " Ghétp từ , " và người chơi biết phải làm gì .
+đây là những người khác đang chơi thử .
+đó là đứa nhỏ nhất , ở phía dưới góc phải .
+rõ ràng , tất cả những gì bé đó muốn là xếp Siftables thành chồng .
+với bé đó , thì Siftables chỉ là những viên gạch .
+bây giờ , đây là ứng dụng tương tác hoạt hình .
+và chúng tôi muốn xây dựng công cụ học ngôn ngữ .
+và đây là Felix .
+nó có thể đem những ký tự mới vào cảnh , bằng cách chỉ cần nhấc các khối Siftables có hình nhân vật trên đó khỏi bàn .
+ở đây , nó đang làm mặt trời ló dạng .
+video : mặt trời đang mọc .
+David Merrill : bây giờ nó bỏ một cái máy kéo vào cảnh nền .
+video : máy kéo màu cam .
+làm tốt lắm ! yeah !
+và bằng cách lắc miếng Siftables và đặt chúng cạnh nhau nó có thể làm các nhân vật tương tác - - Video : Woof !
+DM : sáng tạo ra câu chuyện .
+video : xin chào !
+DM : đây là một câu chuyện mở , và anh ấy quyết định xem nó mở như thế nào .
+video : con mèo bay đi .
+DM : ví dụ cuối cùng mà tôi đưa ra hôm nay là công cụ cho sự phối hợp âm nhạc và biểu diễn trực tiếp mà chúng tôi vừa mới làm , trong đó miếng Siftables hoạt động như là âm thanh như lead , bass và trống .
+mỗi loại có 4 bản khác nhau , bạn sẽ chọn những thứ bạn muốn dùng .
+bạn có thể đưa những âm thanh thành một chuỗi âm mà bạn có thể ghép thành bản nhạc mà bạn muốn .
+bạn đưa âm thanh vào bằng cách đặt Siftable cạnh với chuỗi âm Siftable .
+và có hiệu ứng bạn có thể điều khiển trực tiếp , như là hồi âm và bộ lọc .
+bạn có thể gắn một âm thanh bất kỳ và nghiêng nó đi để điều chỉnh .
+và sau đó , hiệu ứng toàn cục như tốc độc và âm lượng được áp dụng cho toàn bộ chuỗi âm thanh .
+hãy thử xem .
+video : DM : chúng ta sẽ bắt đầu bằng việc đặt lead vào trong hai chuỗi Siftables , sắp xếp chúng thành một chuỗi , mở rộng nó , thêm một chút lead .
+bây giờ tôi đặt dây bass vào .
+video : DM : bây giờ tôi sẽ đặt vài tiếng gõ vào .
+video : DM : và tôi sẽ gắn thêm bộ lọc cho trống , vì tôi có thể điều khiển hiệu ứng trực tiếp .
+video : DM : tôi có thể chỉnh tốc độ của toàn chuỗi bằng cách nghiêng miếng chỉnh tốc độ theo hướng này hay hướng ngược lại Video : DM : và tôi sẽ gắn bộ lọc cho tiếng bass để thêm khả năng truyền cảm .
+video : DM : tôi có thể sắp xếp lại toàn chuỗi khi nó đang chơi .
+và tôi không cần phải lên kế hoạch trước , nhưng tôi có thể phát triển từ từ , làm cho nó dài hơn , hoặc ngắn hơn .
+và bây giờ , cuối cùng , tôi có thể làm chuỗi âm thanh nhỏ dần bằng cách sử dụng miếng chỉnh âm thanh , nghiêng qua bên trái .
+cám ơn .
+như là bạn đã thấy , đam mê của tôi là tạo ra những mối giao hòa giữa con người , máy tính sao cho phù hợp với cách não và cơ thể chúng ta làm việc .
+hôm nay , tôi đã giới thiệu với bạn một điểm trong không gian thiết kế mới , và một vài ứng dụng chúng tôi đang làm để đưa nó ra khỏi phòng thí nghiệm .
+tôi muốn bạn nhớ rằng chúng ta đang trên đỉnh của kỷ nguyên công cụ mới cho việc tương tác với môi trường số , mà sẽ mang nhiều thông tin đến với thế giới chúng ta theo cách của chúng ta .
+xin cám ơn rất nhiều .
+tôi mong sẽ có cơ hội nói chuyện với tất cả mọi người .
+tôi là một nhà văn Viết sách là chuyên môn của tôi , nhưng dĩ nhiên nó còn hơn thế nữa Đó là tình yêu và sự đam mê của cả cuộc đời tôi Và tôi không hi vọng một ngày nào đó nó sẽ thay đổi Nhưng gần đây đang có một số chuyện khác thường xảy ra trong cuộc sống và sự nghiệp của tôi đã khiến tôi phải điều chỉnh lại tất cả mối quan hệ của mình với công việc này Và điều khác thường đó là việc gần đây tôi đã viết một quyển sách
+tên là " Ăn , Cầu nguyện , Yêu " , khác hẵn với những quyển sách trước đây của tôi , quyển sách , được xuất bản vì lý do nào đó , rồi trở thành một hiện tượng lớn , gây xúc động mạnh mẽ , và thành sách bestseller trên toàn thế giới .
+và kết quả của việc đó là tất cả những nơi tôi đến bây giờ mọi người đối xử với tôi như tôi ... đang phải chịu số phận rất bi đát Nghiêm túc đấy - rất bi đát , rất thê thảm !
+giống như giờ đây , họ đến bên cạnh tôi , tất cả đều rất lo lắng , và họ hỏi , " Cô không sợ sao - không sợ là mình sẽ không thể viết hay hơn được ?
+cô không sợ là cô sẽ cứ tiếp tục viết suốt cả cuộc đời mình và sẽ không bao giờ tạo ra một quyển sách mà mọi người trên thế giới này quan tâm đến , thêm bất kỳ một lần nào nữa ? "
+bạn biết đấy , Nhưng nó có thể tệ hơn , ngoài trừ việc tôi tình cờ nhớ lại cách đây hơn 20 năm , lúc tôi còn là đứa trẻ , khi tôi bắt đầu nói với mọi người là tôi muốn trở thành nhà văn , tôi cũng gặp phải cùng một loại phản ứng sợ hãi này .
+và người ta nói là , " cô không sợ sau này sẽ cô sẽ không thành công sao ?
+cô không sợ là sự xấu hổ của việc bị thất bại sẽ giết chết cô sao ?
+cô không sợ là cô sẽ phải dành cả cuộc đời mình cho công việc này mà sẽ không tạo ra được gì hết và rồi cô sẽ chết trong đống đổ nát của những giấc mơ tan vỡ với vị đắng của sự thất bại ?
+bạn biết đấy , cũng giống như vậy .
+câu trả lời , một câu trả lời ngắn cho tất cả các câu hỏi ở trên , " Có " Có , tôi có sợ tất cả những vấn đề trên .
+và vẫn luôn luôn như vậy .
+và tôi còn sợ nhiều thứ khác bên cạnh đó nữa những thứ mà người ta thậm chí còn không thể đoán được nữa .
+giống như tảo biển , và những thứ đáng sợ khác .
+nhưng , khi nói đến chuyện viết lách vấn đề mà tôi đang suy nghĩ và đang tự hỏi gần đây , là tại sao ?
+bạn biết đấy , nó có bình thường không ?
+vấn đề có logic không khi người ta phải sợ hãi công việc mà họ cảm thấy họ được sinh ra trên Trái đất này để làm ?
+bạn biết đấy , có điều gì đặc trưng ở những công việc liên quan đến tính sáng tạo lại khiến chúng ta thực sự lo lắng về sức khỏe tinh thần của nhau , trong khi những nghề khác lại không như vậy ?
+ví dụ như bố tôi là một kỹ sư hóa học và tôi hoàn toàn không nhớ có bất cứ 1 lần nào trong suốt 40 năm làm việc có người hỏi ông liệu ông có sợ trở thành một kỹ sư hóa học không .
+nó không phải là - công việc kỹ sư đang bị bí à , mọi việc thế nào hả John ?
+mọi việc nó không như vậy , đúng không ?
+nhưng công bằng mà nói , những kỹ sư hóa học nằm trong 1 nhóm người trong suốt hằng mấy thế kỷ qua , không có chút tiếng tăm gì trong việc trở thành những người nghiện rượu hay vui buồn thất thường Chúng tôi , những nhà văn , thì lại có tiếng tăm đó và không chỉ những nhà văn thôi , mà dường như những người làm công việc sáng tạo ở tất cả mọi thể loại , đều nổi tiếng trong việc hoàn toàn không ổn định về mặt tinh thần .
+và tất cả những gì chúng ta phải làm là nhìn vào số người chết khổng lồ của những bộ óc sáng tạo thật sự vĩ đại , chỉ riêng trong thế kỷ 20 thôi , những người đã chết trẻ và thường là do tự sát , bạn biết đấy ?
+và thậm chí đối với những người không thực sự tự tử thì họ có vẻ cũng còn dang dở trong công việc của mình .
+Norman Mailer , ngay trước khi chết , vào buổi phỏng vấn cuối cùng ông đã nói " Mỗi quyển sách mà tôi đã viết lại giết tôi thêm 1 chút " Thật là một câu nhận xét khác thường về sự nghiệp cả đời của mình .
+nhưng chúng ta thậm chí còn không nháy mắt khi nghe ai đó nói như vậy vì chúng ta vẫn nghe những thứ như vậy từ rất lâu rồi và theo một cách nào đó chúng ta đã tiếp thu và cùng nhau chấp nhận là tính sáng tạo và sự đau khổ vốn dĩ theo 1 cách nào đó đã gắn liền với nhau rồi và nghệ thuật , cuối cùng sẽ dẫn đến sự đau khổ .
+và câu hỏi tôi muốn hỏi mọi người ở đây hôm nay là các bạn có cảm thấy bình thường với quan niệm này không ?
+bạn có cảm thấy thoải mái với nó không ?
+vì bạn đang nhìn nó thậm chí từ cách xa 1 dặm và , bạn biết đấy , tôi hoàn toàn không thoải mái với giả thuyết ấy chút nào hết .
+tôi nghĩ nó thật ghê tởm .
+và tôi còn nghĩ nó thật nguy hiểm nữa , và tôi không muốn thấy nó tồn tại mãi cho đến những thế kỷ sau .
+tôi nghĩ sẽ tốt hơn nếu chúng ta khuyến khích những tài năng sáng tạo sống Và tôi hoàn toàn biết là , trong trường hợp của tôi , nó sẽ rất nguy hiểm nếu như tôi rớt vào viễn cảnh tăm tối của giả thuyết đó , đặc biệt là giờ đây khi tôi đang ở vị trí hiện tại trong sự nghiệp của mình .
+bạn biết đấy , để xem nào , tôi còn khá trẻ , tôi chỉ mới vào khoảng 40 tuổi .
+tôi có thể còn có thêm 40 năm trong nghề nữa .
+và rất có thể là bất cứ những gì tôi viết từ thời điểm này trở đây sẽ bị cả thể giới đánh giá như một tác phẩm đến sau sự thành công kỳ quặc của tác phẩm vừa rồi , đúng không ?
+tôi sẽ nói thẳng ra , vì chúng ta ở đây cũng gần như là bạn bè rồi , rất có thể thành công vĩ đại nhất của còn nằm phía sau tôi .
+Ôi chúa ơi , thật là một ý nghĩ hay ho phải không !
+nhưng bạn biết đấy , ý nghĩ giống như vậy cũng có thể khiến người ta bắt đầu uống rượu Gin lúc 9h sáng , và tôi không muốn mình như vậy .
+tôi thích tiếp tục làm công việc mà mình yêu thích này hơn .
+và vì thế , câu hỏi đặt ra là , làm sao tôi làm được như vậy ? !
+và rồi , vượt qua nhiều suy nghĩ , có vẻ như điều tôi phải làm ngay bây giờ , để được tiếp tục sáng tác , là phải tự tạo cho mình cấu trúc tâm lý để tự bảo vệ , đúng không ?
+tôi phải tìm một cách nào đó để tạo một khoảng cách an toàn giữa tôi , một nhà văn , với nỗi lo sợ rất tự nhiên của mình về viễn cảnh nghề nghiệp của tôi , từ bây giờ trở đi .
+và , tôi đã cố gắng tìm kiếm những cách để thực hiện việc đó suốt cả năm ngoái Tôi đã tìm kiếm xuyên thời gian và đã cố gắng tìm kiếm trong những xã hội khác để xem liệu họ có những ý tưởng tốt hơn và lành mạnh hơn những gì chúng ta có về việc làm cách nào để giúp đỡ những con người làm công việc sáng tạo ... kiểm soát những rủi ro cố hữu về mặt tình cảm của công việc đó không .
+và cuộc nghiên cứu đã dẫn tôi đến với Hi Lạp và La Mã cổ đại Này , hãy đi cùng tôi , vì nó sẽ đi một vòng Nhưng , tại Hi Lạp và La Mã cổ đại họ không tin là khả năng sáng tạo xuất phát từ bản thân con người Họ tin là sự sáng tạo là do những linh hồn thiêng liêng đã tìm đến con người từ một nơi bí ẩn nào đó ở rất xa , vì những lý do cũng rất bí ẩn và rất xa xôi .
+người Hi Lạp gọi những linh hồn thiêng liêng của sự sáng tạo đó là " deamons " .
+Socrates , tin là ông có 1 daemon người đã truyền đạt sự thông thái cho ông ta từ xa .
+người La Mã cũng có ý nghĩ giống như vậy , nhưng họ gọi linh hồn của sự sáng tạo đó là " genius " .
+điều đó thật tuyệt , vì người La Mã không thực sự nghĩ là " genius " là một cá nhân đặc biệt nào đó .
+họ tin " genius " là một thực thể linh thiêng có phép màu , thực chất đã sống trong những bức tường trong studio của những nghệ sĩ , giống như Dobby trong ngôi nhà của người Elf , và họ sẽ bước ra và giúp đỡ những nghề sĩ làm công việc của mình một cách vô hình và tạo hình cho tác phẩm đó Thật tuyệt vời - đó , chính đó là dạng khoảng cách mà tôi đang nói tới - đó là cấu trúc tâm lý để tự bảo vệ bản thân khỏi kết quả của công việc của mình .
+và mọi người đều đã biết cách thức nó hoạt động rồi , đúng không ?
+như vậy là những nghệ sĩ cổ đại đã được bảo vệ khỏi một số vấn đề cố hữu như việc quá yêu bản thân mình , đúng không ?
+nếu công việc của bạn quá tuyệt vời , bạn không thể dành hết phần công lao , mọi người đều đã biết bạn được một linh hồn linh thiêng nào đó giúp đỡ Và nếu công việc của bạn thất bại , cũng không hoàn toàn do lỗi của bạn , bạn biết đấy !
+mọi người đều biết tài năng của bạn bị mẻ .
+và đó là cách người ta nghĩ về khả năng sáng tạo ở phương Tây trong suốt khoảng thời gian rất dài .
+và rồi thời Phục hưng đến và mọi thứ thay đổi , chúng ta có một ý niệm rất lớn , và ý niệm đó là hãy đặt cá nhân con người vào trung tâm của vũ trụ trên tất cả chúa trời và những bí ẩn , và không còn vị trí nào cho những sinh vật thần bí thường chuyển lời của những đấng linh thiêng .
+và đó sự bắt đầu của chủ nghĩa nhân văn lý trí , và con người bắt đầu tin tưởng rằng khả năng sáng tạo hoàn toàn nằm trong tự bản thân mỗi người Và lần đầu tiên trong lịch sử , bạn nghe mọi người nhận xét về nghệ sĩ này hoặc nghề sĩ kia " là " thiên tài thay vì là " có " một linh hồn sáng tạo " genius " hỗ trợ Và tôi phải nói với bạn điều này , tôi nghĩ đó là một sai lầm nghiêm trọng .
+bạn biết không , tôi nghĩ khi để ai đó , một cá nhân nào đó tin tưởng bản thân mình là , bạn biết đấy , là bản chất , là nguồn gốc của tất cả những bí ẩn rất thần thánh , và rất mơ hồ đó là đã đặt 1 trách nhiệm quá lớn lên tâm lý rất mong manh , rất con người của cá nhân họ .
+điều đó giống như đòi hỏi một ai đó phải nuốt chửng cả mặt trời .
+điều đó hoàn toàn bóp méo cái tôi của họ , và nó tạo ra tất cả những kỳ vọng không kiểm soát được về thành tích của việc sáng tạo .
+và tôi nghĩ áp lực đó đã giết những nghệ sĩ của chúng ta trong suốt 500 năm qua .
+và , nếu điều đó đúng , mà tôi nghĩ là nó đúng , thì câu hỏi sẽ trở thành , bây giờ thì sao ?
+chúng ta có làm gì khác đi được không ?
+có thể quay về với những khái niệm cổ xưa về mối quan hệ giữa con người và những sinh vật kỳ bí .
+có thể không .
+có thể chúng ta không thể đơn giản xóa đi 500 năm những suy nghĩ mang tính nhân văn đó chỉ trong một buổi nói chuyện dài 18 phút .
+có thể cũng có thể có người trong số khán giả dưới kìa sẽ đặt những nghi vấn khoa học thật sự chính thống về khái niệm những nàng tiên , họ theo người khác để mang đến sự thần kỳ trong những dự án của họ .
+có lẽ , tôi sẽ không kéo bạn theo cùng tôi trong những suy nghĩ này .
+nhưng một câu hỏi tôi muốn đề ra là , bạn biết đó , tại sao không chứ ?
+tại sao lại không nghĩ về nó như vậy ?
+vì nó , đối với tôi , cũng hay ho như tất cả những gì tôi đã từng nghe nhằm giải thích cho sự điên khùng khủng khiếp của quá trình sáng tạo .
+một quá trình , như bất kỳ ai đã từng cố gắng sáng tạo ra một cái gì đó , có thể là tất cả mọi người ở đây , đều biết đó không phải luôn luôn diễn ra một cách rõ ràng .
+và , thật ra , nhiều lúc có thể nói thẳng ra là một quá trình huyền bí , siêu linh .
+gần đây tôi có những suy nghĩ này khi tôi gặp một nhà thơ tuyệt vời người Mỹ Ruth Stone , người hiện đang bước vào tuổi 90 , những bà đã là nhà thơ trong suốt cuộc đời và bà nói với tôi là khi bà lớn lên tại vùng quê Virginia , bà phải ra đồng làm việc , và bà nói bà có thể cảm nhận thấy và có thể nghe thấy 1 bài thơ xuất phát từ khung cảnh xung quanh .
+và bà nói điều đó giống như một một chuỗi sấm chớp , giông tố Và nó sẽ đánh ập vào bà từ khoảng không kia Và bà cảm thấy nó đang đến , vì nó sẽ làm rung chuyển mặt đất dưới chân bà .
+bà biết là khi đó chỉ có 1 việc duy nhất để làm thôi , và đó chính là , theo lời bà , " chạy như chết . "
+và bà sẽ chạy như chết về nhà và bà để cho bài thơ này ruợt mình , và toàn bộ vấn đề khi đó là bà phải lấy một mảnh giấy và một cây viết chì đủ nhanh để khi nó nổ sấm chớp xuyên qua bà , bà có thể túm được nó và đặt nó vào một mảnh giấy .
+và những lần khác bà có thể không đủ nhanh , vì thế bà cứ chạy , cứ chạy và chạy , nhưng bà không về kịp đến nhà , bài thơ đến và bà để tuột mất nó và bà nói nó sẽ tiếp tục bay qua không gian như thế , để tìm kiếm , theo lời bà , là " những nhà thơ khác . "
+và có những lúc , đây là đoạn tôi không bao giờ có thể quên được , bà nói có những khoảng khắc bà gần như hoàn toàn vuột mất nó Vì thế , bà chạy đến nhà , tìm một mảnh giấy và khi bài thơ sắp vuột mất , bà nắm lấy cây viết chì như lúc bài thơ vẫn đang ở nguyên trong đầu , và khi đó bà nói , giống như bà đang dùng bàn tay kia với lấy nó và bà sẽ bắt nó lại được Bà sẽ nắm lấy bài thơ bằng cái đuôi của nó , và bà sẽ kéo nó lại vào trong cơ thể của bà
+và bà bắt đầu ghi chép lại lên mảnh giấy .
+và trong những lần như vậy , bài thơ sẽ hiện ra trên giấy một cách hoàn hảo và nguyên vẹn nhưng lại bị đảo ngược , từ chữ cuối cùng đến chữ đầu tiên .
+vì thế khi tôi nghe như vậy tôi giống như ... điều đó thật huyền bí , điều đó hoàn toàn giống với quá trình sáng tác của tôi .
+nhưng đó không phải tất cả quá trình sáng tác của tôi , tôi không phải cái ống dẫn !
+tôi là một người cứng đầu , và cách tôi làm việc là tôi phải thức dậy đúng giờ mỗi ngày , và đổ mồ hôi và lao động và trải qua nó một cách vụng về .
+nhưng thậm chí tôi , với cá tính ương bướng của mình .
+tôi cũng phải xem lại nó một vài lần .
+và tôi tưởng tượng là đa số các bạn cũng phải làm như vậy .
+bạn biết đấy , ngay cả tôi cũng có những ý tưởng đến với mình từ những nguồn gốc mà thật lòng tôi không thể xác định được .
+vậy thì đó là cái gì chứ ?
+và chúng ta liên hệ với nó như thế nào khi nó không làm ta mất trí , mà thật ra lại có thể giữ cho chúng ta sáng suốt ?
+và đối với tôi , một ví dụ gần đây nhất về việc đó là nhà soạn nhạc Tom Waits , người tôi đã có dịp phỏng vấn vài năm trước cho 1 bài báo .
+và chúng tôi cũng nói về vấn đề này , và bạn biết đấy , Tom , trong hầu hết cuộc đời ông , ông là minh chứng về một nghệ sĩ đương đại sống trong dày vò , đau khổ , cố gắng kềm chế , kiểm soát và chi phối những sức ép không thể kiểm soát được của sự sáng tạo , những sức ép hoàn toàn chủ quan .
+nhưng sau đó ông già hơn , ông trở nên bình tĩnh hơn , và vào một ngày khi ông đang lái xe trên xa lộ tại Los Angeles , ông bảo tôi , và đó là khi tất cả mọi thứ đối với ông thay đổi Và khi ông đang chạy , bỗng nhiên , ông nghe một đoạn giai điệu nhỏ xuất hiện trong đầu ông như cảm hứng vẫn thường đến , trêu ngươi và rất khó nắm giữ , và ông muốn đó , bạn biết đấy , nó hoàn hảo , và ông mong mỏi nó , nhưng ông lại không có cách nào để nắm lấy nó .
+ông không có giấy , không có bút cũng không có máy ghi âm .
+vì thế ông bắt đầu cảm thấy thất cả sự lo lắng xưa cũ xuất hiện trong mình giống như " Rồi tôi sẽ vuột mất nó , và sau đó tôi sẽ bị ám ảnh bởi bài hát này mãi mãi .
+tôi không đủ sức , tôi không thể làm được " .
+và thay vì kích động , ông dừng lại .
+ông dừng toàn bộ quá trình suy nghĩ đó và ông đã làm một việc lạ thường .
+ông nhìn lên trời , và ông nói , " Xin lỗi , mày không thấy tao đang lái xe sao ? " .
+" nhìn tao có giống như tao có thể viết nhạc ngay bây giờ không ?
+nếu mày muốn ra đời , thì hãy đến vào những lúc thích hợp hơn khi tao có thể chăm sóc cho mày .
+còn nếu không , hôm nay hãy đi làm phiền người nào khác đi .
+đi làm phiền Leonard Cohen đi " .
+và sau đó thì toàn bộ quá trình làm việc của ông thay đổi .
+không phải công việc , công việc vẫn tăm tối như trước giờ .
+nhưng là quá trình , và tất cả những nổi băn khoăn xung quanh nó đã được giải phóng khi ông tách vị " genius " ra khỏi bản thân ông nơi nó không làm được gì ngoài việc gây rắc rối , và trả nó về nơi của nó và nhận ra là mọi việc cũng đến mức phải dằn vặt và đau khổ như vậy Nó có thể là những đoạn đối thoại kỳ lạ giữa Tom và một đối tượng bên ngoài không hoàn toàn là Tom Khi tôi nghe câu chuyện đó tôi bắt đầu thay đổi một chút trong cách tôi làm việc , và nó cũng gần như đã cứu sống tôi một lần .
+ý tưởng này , nó đã cứu sống tôi khi tôi đang viết " Ăn , Cần nguyện , Yêu " giữa chừng và tôi đã rơi vào một trong những ... giống như những cái hố của sự tuyệt vọng nơi chúng ta thường rơi vào khi chúng ta đang cố gắng làm gì đó nhưng kg được và bạn bắt đầu nghĩ việc này sớm muộn sẽ trở thành 1 tai họa , đây sẽ là một quyển sách tệ nhất từ trước tới giờ .
+không phải chỉ là dở ẹt thôi , mà là quyển sách tệ hại nhất đã từng được viết Và tôi bắt đầu nghĩ tôi nên từ bỏ dự án này .
+nhưng sau đó tôi nhớ đến việc Tom nói chuyện với khoảng không trước mặt và tôi đã thử .
+vậy là tôi ngẩng mặt lên khỏi đống bản thảo và tôi chỉ thẳng vào 1 góc trống của căn phòng .
+và tôi nói to : " mày , nghe này , tao và mày đều biết là nếu quyển sách này không thàng công đó không phải hoàn toàn là lỗi của tao , đúng không ?
+vì mày có thể thấy là tao đang đặt hết những gì tao có vào nó , Tao không còn gì hơn thế nữa .
+vậy nếu mày muốn nó hay hơn , thì mày nên xuất hiện và làm phần việc của mày đi .
+OK . nhưng nếu mày không xuất hiện , mày biết gì không , thật đáng chết .
+dù sao tao cũng vẫn sẽ tiếp tục viết vì đây là công việc của tao .
+và hôm nay tao muốn được ghi nhận là đã hoàn thành tốt phần công việc của mình " .
+vì - - - cuối cùng thì việc nó cũng thế này , OK - - hằng thế kỷ trước , tại những sa mạc vùng Bắc Phi , người ta đã từng tụ tập lại để nhảy những điệu nhảy thần thánh dưới ánh trăng liên tục suốt hằng giờ liền , cho đến khi trời sáng .
+và chúng thật lộng lẫy , vì tất cả những vũ công đều chuyên nghiệp và họ đã thật tuyệt vời , phải không ?
+nhưng , một hôm nào đó , rất hiếm hoi , một điều kỳ lạ sẽ xảy ra , và một trong những vũ công đó trở nên sáng chói .
+và tôi biết bạn hiểu tôi đang nói đến cái gì , vì tôi biết tất cả các bạn đều đã thấy , vào một lúc nào đó trong cuộc sống của bạn , một màn trình diễn như vậy .
+giống như thời gian dừng lại , và người vũ công sẽ giống như vừa bước qua một cánh cửa nào đó anh ta hoàn toàn không làm gì khác ngoài những gì trước giờ anh vẫn làm suốt 1000 đêm trước đó , nhưng rồi mọi thứ được sắp đặt .
+và bỗng nhiễn , anh ta sẽ không bao giờ còn là một người bình thường nữa .
+anh ta được khai sáng , được tôn sùng và được tung hô như một vị thánh .
+và hồi đó , khi điều này xảy ra , người ta nhìn nhận nó , bạn biết đấy , họ gọi nó bằng cái tên của nó .
+họ sẽ đặt bàn tay của họ với nhau , và bắt đầu cầu kinh , " Thánh Allah , Thánh Allah , Thánh Allah , Chúa trời , Chúa trời , Chúa trời " .
+đó là Chúa , bạn biết đấy .
+một ghi chú gây tò mò thời cổ đại nói rằng , khi người Marốc xâm lược phía Bắc Tây Ban Nha , họ mang theo phong tục này của họ và cách phát âm đã thay đổi qua hàng mấy thế kỷ .
+từ " Allah , Allah , Allah " thành " Ole , ole , ole " , tiếng gọi mà tôi vẫn còn được nghe trong những trận đấu bò và những điệu nhảy flamenco Ở Tây Ban Nha , khi một vũ công làm được một điều gì đó màu nhiệm , " Allah , ole , ole , Allah , hoàn hảo , hoan hô " , không thể hiểu nổi , và nó đây rồi , chính sự hiện thân của Chúa .
+đó là điều thật tuyệt vời , vì chúng ta cần nó .
+nhưng , vấn đề rắc rối xảy đến vào sáng hôm sau , đối với chính anh chàng vũ công đó , khi anh ta thức dậy và phát hiện ra bây giờ là Thứ ba , 11h sáng , và anh ta không còn là hiện thân của Chúa nữa Anh ta một con người đang già đi với đầu gối đang rất đau , và có thể anh ta sẽ không bao giờ thành công đến mức như vậy nữa .
+và có thể sẽ không bao giờ có ai tụng ca tên của Chúa khi anh nhảy nữa , và khi đó anh ta sẽ làm gì với phần đời còn lại của minh ?
+điều này thật khó khăn .
+điều này cũng là một trong những sự thích nghi đau đớn nhất mà những người làm nghệ thuật phải tập quen trong cuộc đời nghệ thuật của mình .
+nhưng có lẽ nó không cần phải trở thành một nổi thống khổ như vậy nếu như , ngay từ đầu , bạn đã không tin những khía cạnh đặc biệt nào đó của bạn xuất phát từ chính bản thân bạn .
+có lẽ nếu bạn chỉ xem chúng như một khoảng bạn vay từ một nguồn gốc không tưởng nào đó , và rồi một phần tinh hoa của bạn phải được chuyển đi khi bạn hoàn tất sứ mệnh của mình để đến với một người khác .
+và , bạn biết đấy , nếu chúng ta nghĩ về điều này như vậy thì mọi thứ bắt đầu thay đổi .
+đây là cách tôi bắt đầu nghĩ , và đây chính xác là điều tôi luôn nghĩ đến trong vài tháng gần đây khi tôi đang viết một quyển sách tôi sẽ sớm xuất bản , như một bước đi đầy nguy hiểm , đáng sợ tiếp sau sự thành công quái đản của tôi vừa rồi .
+và tôi phải luôn tự nhắc nhở bản thân mỗi khi tôi căng thẳng về chuyện đó , là , đừng sợ hãi .
+đừng nản lòng .
+hãy làm công việc của mình .
+tiếp tục thực hiện phần việc của mình , dù nó có thế nào đi nữa .
+nếu công việc của bạn là nhảy , hãy nhảy đi .
+khi những vì thần được ấn định trong trường hợp của mình quyết định để điều kỳ diệu được xuất hiện , dù chỉ trong 1 khoảng khắc qua những cố gắng của bạn thôi , thì " Ole ! "
+còn nếu không , thì bạn vẫn cứ nhảy đi .
+và dù sao cũng hãy tự " Ole ! " cho bản thân mình .
+tôi tin tưởng vào điều này và tôi thấy chúng ta phải dạy nó .
+dù sao cũng hay tự " Ole ! " cho bản thân mình đi , đơn giản vì sự ích kỷ và tình yêu bản thân khi đã luôn cố gắng hết sức để làm phần việc của mình .
+cám ơn .
+cám ơn .
+June Cohen : Ole !
+như chúng ta đã biết , một trong những thú vui tuyệt vời của du lịch và niềm vui của nghiên cứu dân tộc học là cơ hội được sống giữa những người không quên quá khứ , những người vẫn cảm nhận thấy quá khứ của mình trong gió , sờ thấy quá khứ trong những tảng đá đã bị nước mưa rửa sạch và nếm nó trong vị đắng của lá cây , chỉ để biết rằng những pháp sư Jaguar vẫn tiếp tục cuộc hành trình ngoài Dải ngân hà , và huyền thoại về những già lão Inuit vẫn vang lên đầy ý nghĩa ,
+hay ở trên dãy Himalaya , những nhà sư vẫn theo đuổi con đường Phật pháp .
+khi nói về bản chất của nhân chủng học , có ý kiến cho rằng thế giới chúng ta đang sống không hề tồn tại một cách tuyệt đối , mà chỉ là một thực thể , kết quả của một loạt những lựa chọn thích nghi cụ thể mà tổ tiên chúng ta đã chọn thành công cách đây rất nhiều thế hệ .
+và tất nhiên , tất cả chúng ta đều trải qua quá trình phát triển và thích nghi như nhau .
+chúng ta đều được sinh ra rồi lại sinh con đẻ cái .
+chúng ta cùng phải trải qua những nghi lễ đầu đời .
+chúng ta cùng phải đối mặt với sự chia ly không thể tránh khỏi của cái chết , do đó không hề ngạc nhiên khi chúng ta đều hát , đều nhảy , và trong mỗi người đều có nghệ thuật .
+nhưng điều thú vị lại là những phách nhịp độc đáo của bài hát , sự nhịp nhàng rất riêng trong vũ điệu của mỗi nền văn hóa , dù đó là văn hóa của những người Penan sống trong rừng già Borneo , hay những thầy tu Voodoo ở Haiti , hay những chiến binh ở sa mạc Kaisut , phía Bắc Kenya , những pháp sư Curandero sống trên dãy núi Andes , hay đoàn thương nhân ở giữa lòng sa mạc Sahara .
+đây là một người bạn mà tôi tình cờ đi du lịch sa mạc cùng một tháng trước , thực chất là một người chăn bò trên sườn Qomolangma , đỉnh Everest , mẹ thần thánh của thế giới .
+tất cả những con người này dạy cho chúng ta rằng có rất nhiều cách khác nhau để sống , để suy nghĩ , để định hướng bản thân trên Trái đất này .
+và đó là một ý tưởng mà nếu bạn nghĩ về nó , sẽ mang lại cho bạn hy vọng Giờ đây , vô số nền văn hóa cùng tồn tại trên thế giới tạo thành một mạng lưới đời sống tinh thần và đời sống văn hóa bao bọc hành tinh này , điều này thực sự quan trọng với sự tồn tại của hành tinh không kém gì mạng lưới sinh thái mà chúng ta biết đến với tên gọi là sinh quyển .
+và bạn có thể định nghĩa mạng lưới đời sống văn hóa này như một sinh quyển dân tộc và bạn có thể định nghĩa sinh quyển dân tộc như một tổng hòa của tất cả những suy nghĩ , ước mơ , huyền thoại , ý tưởng , cảm hứng , trực giác được tạo ra bởi trí tưởng tượng con người kể từ khi có sự xuất hiện của ý thức .
+sinh quyển dân tộc là một truyền thuyết vĩ đại của nhân loại .
+đó là biểu tượng của tất cả những gì chúng ta có và tất cả những gì chúng ta có thể làm như một giống loài ham học hỏi .
+và khi sinh quyển bị xói mòn nghiêm trọng , thì sinh quyển dân tộc cũng thế và có thể ở một tốc độ nhanh hơn .
+chẳng hạn , không một nhà sinh vật học nào dám cho rằng có tới 50 % số loài sinh vật hoặc hơn đã và đang đứng trên bờ vực tuyệt chủng vì đơn giản là điều này không đúng , ngay cả trong hoàn cảnh hủy diệt nhất của vương quốc sinh học đa dạng .
+cũng rất khó để kết luận những gì ta biết là viễn cảnh lạc quan nhất của thế giới văn hóa muôn màu .
+và dấu hiệu rõ ràng nhất tất nhiên là ngôn ngữ mất đi .
+khi mỗi chúng ta trong căn phòng này được sinh ra , có khoảng 6000 ngôn ngữ đang tồn tại trên hành tinh .
+giờ đây , ngôn ngữ không chỉ là chủ thể của từ vựng hay là một bộ quy tắc ngữ pháp .
+ngôn ngữ là sự thể hiện của tinh thần con người .
+đó là phương tiện mà linh hồn của mỗi nền văn hóa được chuyển đến thế giới vật chất .
+mỗi ngôn ngữ là một khu rừng phát triển lâu đời , một bước ngoặt , một ý tưởng , một hệ sinh thái của năng lực tinh thần .
+và khi chúng ta ngồi đây , hôm nay , ở Montery , trong số 6000 ngôn ngữ đấy , một nửa đã hoàn toàn biến mất .
+những ngôn ngữ này không còn được dạy lại cho những đứa trẻ , điều này gần như có nghĩa rằng những ngôn ngữ này đã chết .
+liệu còn có điều gì có thể cô đơn hơn bị cô lập trong im lặng , trở thành người cuối cùng của dân tộc nói ngôn ngữ của mình , và không có cách nào truyền lại trí tuệ tổ tiên hay dự đoán tương lai của những đứa trẻ ?
+và định mệnh nghiệt ngã đó cũng là cảnh ngộ của một vài người , ở đâu đó trên Trái Đất cứ mỗi hai tuần lại xảy ra một lần vì cứ mỗi hai tuần , lại có một già lão chết đi và mang theo xuống mồ những âm tiết cuối cùng của một ngôn ngữ cổ đại .
+và tôi biết sẽ có một ai đó trong số các bạn nói rằng , " Biết đâu như thế lại tốt hơn ?
+biết đâu thế giới lại tốt hơn nếu như chúng ta cùng nói chung một ngôn ngữ " Và tôi sẽ nói , " Tuyệt vời , hãy chọn ngôn ngữ đó là tiếng Yoruba . hãy chọn ngôn ngữ đó là tiếng Quảng Đông .
+hãy chọn ngôn ngữ đó là tiếng Kogi . "
+và bạn sẽ đột nhiên nhận ra rằng sẽ như thế nào nếu không thể nói ngôn ngữ của chính mình .
+và do đó , điều mà tôi muốn làm cùng các bạn ngày hôm nay là đưa các bạn đi tham quan một vòng sinh quyển dân tộc - một chuyến đi ngắn để cố gắng cho các bạn một cái nhìn về thực tế điều gì đang mất đi .
+hiện nay , có rất nhiều người trong số chúng ta đã quên rằng khi tôi nói " nhiều cách sống khác nhau . "
+tôi thực sự nói rằng có rất nhiều cách sống khác nhau .
+hãy lấy đứa trẻ dân tộc Barasana sống ở Tây Bắc vùng Amazone làm ví dụ , dân tộc của trăn anaconda những người tin rằng trong thần thoại họ đã từng đi qua dòng sông sữa từ phía Đông bên trong bụng của những con rắn thần .
+cho đến bây giờ , đây là một dân tộc mà trong nhận thức không phân biệt giữa màu xanh da trời và màu xanh lá cây vì theo họ , vòm trời cũng tương tự như vòm lá nơi mà cả dân tộc trông cậy .
+họ có một tục kết hôn và ngôn ngữ kỳ lạ được gọi là chế độ ngoại hôn ngôn ngữ : bạn phải lấy một người nói ngôn ngữ khác .
+điều này bắt nguồn từ quá khứ xa xưa , mang đến điều thú vị là trong những căn nhà dài , nơi có 6 hoặc 7 ngôn ngữ được nói , nhờ chế độ hôn nhân đặc biệt , bạn sẽ không bao giờ nghe thấy một ai tập nói một thứ ngôn ngữ nào .
+họ chỉ đơn giản là nghe và học nói theo .
+hay , một trong những bộ tộc thú vị nhất mà tôi từng sống , bộ tộc Waorani ở Đông Bắc Ecuador , một bộ tộc lần đầu tiên tiếp xúc một cách hòa bình với thế giới bên ngoài vào năm 1958 .
+năm 1957 , 5 người truyền giáo đã cố gắng tiếp xúc nhưng đã có một sai lầm nghiêm trọng .
+họ thả xuống từ trên không những bức ảnh 8 x 10 của mình theo cách mà chúng ta vẫn cho là cử chỉ thân thiện , mà quên mất rằng những con người của rừng mưa nhiệt đới này chưa từng thấy cái gì 2 chiều trong đời .
+họ nhặt những tấm ảnh này trên đất , cố gắng nhìn phía sau những khuôn mặt này để tìm ra hình dạng , nhưng không tim thấy gì và kết luận rằng đây là những lá bài gọi tên từ quỷ sứ , do vậy họ đã đâm 5 nhà truyền giáo này đến chết .
+tuy nhiên , bộ tộc Waorani không chỉ đâm người ngoài .
+họ còn đâm lẫn nhau .
+54 % cái chết của họ là do đâm nhau bằng giáo .
+chúng ta hãy cũng lật lại phả hệ 8 đời , và chúng ta thấy rằng có 2 trường hợp chết tự nhiên và khi chúng ta hỏi dồn họ một chút về vấn đề này , họ thừa nhận rằng một trong những người bạn đã trở nên quá già và đằng nào họ cũng chết già nên chúng ta đâm họ trước còn hơn . nhưng cùng lúc đó họ cũng có một tri thức tuyệt vời về rừng nhiệt đới .
+những người thợ săn của bộ tộc có thể ngửi thấy mùi nước tiểu của động vật trong phạm vi 40 bước và cho bạn biết đó là loài động vật nào .
+trong những năm đầu của thập niên 80 , tôi đã từng có một bài tập thú vị do giáo sư của tôi ở ĐH Harvard yêu cầu nếu như tôi muốn đến Haiti , tìm hiểu xã hội bí mật là nền móng cho sức mạnh của Duvalier và Tonton Macoutes , và tìm hiểu chất độc được sử dụng để tạo ra những thây ma .
+và để tìm hiểu mọi chuyện , tất nhiên , tôi phải hiểu đôi chút về niềm tin đáng chú ý này của Vodoun , và Voodoo không phải là một tà thuật .
+trái lại , nó là một nhân sinh quan siêu hình phức tạp .
+nó thật thú vị .
+nếu tôi yêu cầu các bạn kể tên những tôn giáo vĩ đại nhất trên thế giới bạn sẽ trả lời thế nào ?
+thiên chúa Giáo , đạo Hồi , Phật giáo , đạo Do Thái , v . v .
+vẫn luôn có một lục địa còn lại ngoài kia , có một giả tưởng cho rằng Phi Châu , vùng Sahara không có tín ngưỡng tôn giáo . Vâng , tất nhiên , họ có và Voodoo đơn giản chỉ là một sản phẩm kết tinh của những ý tưởng tôn giáo uyên thâm đã trải qua giai đoạn nô lệ đầy bi kịch của cộng đồng Do Thái .
+nhưng , điều làm cho Voodoo thú vị chính là mối quan hệ tồn tại giữa người sống và người chết .
+theo đó , người sống sinh ra những linh hồn .
+những linh hồn này có thể hiển linh từ dưới Dòng nước vĩ đại , đáp lại nhịp của các vũ điệu để trong một phút nào đó nó sẽ thay thế linh hồn của người sống , trong khoảnh khắc tỏa sáng ngắn ngủi ấy , thầy tu trở thành thần thánh .
+đó là lý do tại sao những phù thủy Voodoo nói rằng " Những người da trắng các anh đi đến nhà thờ và nói về Chúa .
+chúng tôi nhảy múa trong đền thờ và trở thành Thần . "
+và bởi vì các anh bị chiếm hữu , bị dẫn dắt bởi các linh hồn , Làm sao các anh có thể gặp nguy hiểm ?
+do đó các bạn có thể thấy từ những minh họa này : các thầy tu Voodoo ở trong trạng thái xuất thần tay cầm than hồng đang cháy mà không sao , một ví dụ khá thú vị cho thấy khả năng của trí óc có thể ảnh hưởng tới cơ thể chứa nó khi trí óc trong trạng thái hưng phấn cực độ .
+hiện giờ , trong số tất cả các dân tộc tôi từng sống cùng , dân tộc đặc biệt nhất là Kogi sinh sống ở vùng Sierra Nevada de Santa Marta , phía Bắc Colombia .
+hậu duệ của nền văn minh chuyên chế cổ đại từng chiếm vùng đồng bằng duyên hải Caribbean của Colombia trong giai đoạn mở đầu của cuộc chinh phạt , những người này đã phải rút lui vào trong một ngọn núi lửa bị cô lập sừng sững vươn cao phía trên vùng duyên hải Caribbean .
+trong một lục đĩa đẩm máu , dân tộc này chưa bao giờ bị thống trị bởi người Tây Ban Nha .
+cho đến nay , họ vẫn bị cai trị bởi thầy tu tế nhưng việc đào tạo thầy tu của họ cũng khá đặc biệt .
+những thầy tu tương lai bị tách khỏi gia đình lúc còn 3,4 tuổi bị cô lập trong thế giới của bóng tối trong những căn nhà bằng đá nằm giữa lòng của các dòng sông băng trong suốt 18 năm ròng 2 chu kỳ 9 năm được chọn một cách kỹ lưởng để mô phỏng 9 tháng thai nghén nằm trong bụng mẹ , giờ đây họ lại trải qua giai đoạn biến hóa trong bụng của Mẹ vĩ đại .
+và trong suốt thời gian này , họ hấp thụ những giá trị của xã hội mình , những giá trị để duy trì lời cầu nguyện từ các tín đồ và chỉ những tín đồ của họ mới là người duy trì vũ trụ - - chúng ta vẫn gọi là cân bằng sinh thái .
+và ở cuối giai đoạn khởi đầu lạ lùng này , một ngày họ đột nhiên được đưa ra ngoài và lần đầu tiên trong đời , ở tuổi 18 , họ nhìn thấy mặt trời mọc . và trong giây phút huy hoàng đó nhận thấy những ánh sáng đầu tiên ngập tràn khung cảnh đẹp tuyệt vời , đột nhiên mọi thứ họ học trong bóng tối được khẳng định trong huy hoàng . và vị thầy tu bước lại và nói , " Con thấy chưa ? nó chính là những gì ta đã nói với con .
+nó rất đẹp . và con phải bảo vệ nó . "
+họ tự gọi mình là những người anh lớn và họ nói chúng ta , những người em nhỏ , là những người chịu trách nhiệm về sự hủy diệt của thế giới .
+hiện giờ , mức độ nhận thức trở nên rất quan trọng .
+mỗi khi chúng ta nghĩ về những cảnh vật và con người bản địa , chúng ta có thể lấy dẫn chứng về Rousseau và những thông tin lệch lạc của tầng lớp thượng lưu độc ác , nói đơn giản là sự phân biệt chủng tộc , hoặc chúng ta có thể lấy dẫn chứng về Thoreau và nói rằng những con người này sống thực tế hơn chúng ta .
+Vâng , những người bản địa không hề ủy mị cũng như yếu đuối vì lòng hoài cổ .
+không có nhiều chỗ cho cả 2 ở trong những đầm lầy sốt rét vùng Asmat trong những cơn gió rét vùng Tibet , qua thời gian và những nghi lễ , họ tạo ra sự thần bí truyền thống của Trái Đất nền tảng của những thần bí này không phải là sự tồn tại của con người gắn với nó , mà ở một mức độ nhận thức tinh vi hơn : rằng bản thân Trái Đất chỉ có thể tồn tại Khi nó tồn tại trong nhận thức của con người .
+giờ thì điều đó có nghĩa là gì ?
+điều đó có nghĩa là một đứa trẻ ở vùng núi Andes được nuôi nấng , dậy dỗ tin tưởng rằng ngọn núi này là thần Apu ™ sẽ hướng dẫn định mệnh của chúng đứa trẻ sẽ là một con người hoàn toàn khác và có mối quan hệ hoàn toàn khác với ngọn núi nơi mà nó sinh sống so với một đứa trẻ ở Montana được nuôi dậy tin tưởng rằng ngọn núi là một đống đá sẵn sằng được khai thác .
+dù đó là một nơi ở của một linh hồn hay một đống quặng thì cũng chẳng liên quan gì .
+điều thú vị ở đây là sự ẩn dụ định nghĩa mối quan hệ giữa cá nhân và thế giới tự nhiên .
+tôi lớn lên ở vùng rừng núi British Columbia và được dạy rằng những khu rừng tồn tại để bị đốn hạ Điều đó biến tôi thành một con người khác so với những người bạn ở Kwakiutl những người tin rằng những khu rừng là nơi ở của thần Hukuk và một phần của thiên đàng và tin rằng những linh hồn ăn thịt người sống tại điểm cực Bắc , đã tham gia vào thuở hình thành Hamatsa Bây giờ , nếu bạn xem xét ý kiến cho rằng những nền văn hóa này sẽ tạo ra những sự thật khác nhau ,
+bạn sẽ bắt đầu hiểu một số phát hiện đặc biệt của họ . hãy nhìn vào cái cây này .
+đây là một bức ảnh tôi chụp ở vùng Tây Bắc Amazone tháng 4 vừa qua .
+đây là cây vông đồng ayahuasca mà rất nhiều người trong số các bạn đã từng nghe tới , loài cây dùng để cúng lễ trong nghi lễ của các pháp sư .
+điều tạo nên sự thú vị của loài cây ayahuasca này không phải là thành phần dược chất mạnh mẽ , mà chính là quá trình điều chế . nó được làm từ hai nguồn khác nhau .
+một mặt , đây là loài dây leo gỗ mà trong đó có rất nhiều beta - carbolines harmine , harmonline , và một ít chất gây ảo giác .
+nếm thử một chút cây leo sẽ có một ít khói xanh mờ ngấm vào tâm trí bạn , tuy nhiên cây leo sẽ được trộn với lá của cây bụi thuộc họ café có tên gọi Psychotria viridis .
+loại cây này có chứa một ít tryptamines cực mạnh , rất gần với chất serotonin , dimethyltryptamine - 5 , methoxydimethyltryptamine trong não .
+nếu bạn đã từng chứng kiến người Yanomami hít chất này qua mũi , chất này được làm từ rất nhiều loại còn có methoxydimethyltryptamine , khi hít sẽ có cảm giác giống như bị bắn khỏi họng súng trường nhìn thấy những bức họa phong cách Baroque và đáp xuống biển tích điện . nó không hề làm méo sự thật ; mà làm tan rã sự thật .
+trên thực tế , tôi đã từng tranh luận với giáo sư của mình , ông Richard Evan Shultes - - người đã từng tạo ra thời kỳ ảo giác với việc phát minh ra loại nấm kỳ diệu ở Mexico những năm 1930 .
+tôi đã từng cho rằng bạn không thể xếp các loại tryptamines như chất gây ảo giác bởi vì tại thời điểm bạn chịu ảnh hưởng của thuốc không còn có ai ở nhà nữa để trải nghiệm ảo ảnh . nhưng một điều về các loại tryptamines này là không thể uống chúng bởi chúng sẽ bị trung hòa bởi một loại enzyme tồn tại tự nhiên trong ruột người có tên gọi monoamine oxidase .
+chúng chỉ có thể có tác dụng nếu được uống cùng với một số loại hóa chất làm biến đổi MAO.
+và điều kỳ diệu là chất beta - carbolines được tìm thấy trong loại dây leo đó đều là chất ức chế hoàn toàn MAO để tăng khả năng cho tryptamine . do đó nếu bạn có tự hỏi một câu .
+làm thế nào trong cả quần thực vật gồm hơn 80.000 loại cây khác nhau , những người này lại có thể tìm ra 2 loại cây chẳng liên quan gì về mặt hình thái vậy mà khi liên kết với nhau , lại tạo ra một phiên bản sinh hóa mà xét một cách tổng thể còn lớn hơn tổng các thành phần ?
+Vâng , chúng ta sẽ sử dụng lối nói ẩn dụ , phương pháp loại trừ , có vẻ như vô nghĩa , bởi nếu bạn hỏi người Ấn Độ , họ sẽ nói , " Cây cỏ nói cho chúng tôi biết . "
+vậy , điều đó có nghĩa là gì ?
+bộ tộc này , những người Cofan , có tổng cộng 17 loại ayahuasca khác nhau , mỗi loại này ở trong rừng lại rất khác nhau , và tất cả các loại này dưới mắt quan sát của chúng ta đều được coi là một loài .
+và sau đó bạn hỏi họ làm thế nào để phân loại và họ sẽ nói , " Tôi nghĩ anh biết chút ít về thực vật .
+ý của tôi là , anh có biết chút gì không ? " và tôi trả lời , " Không . "
+Vâng , vậy anh phải lấy từng loại trong 17 loại vào mỗi tối trăng tròn , mỗi loại sẽ hát cho anh nghe một bài hát khác .
+điều này sẽ không giúp bạn có bằng tiến sĩ ở ĐH Harvard , nhưng nó thú vị hơn nhiều so với việc đếm nhị hoa .
+bây giờ , vấn đề - - vấn đề là ngay cả khi chúng ta đồng cảm với hoàn cảnh khó khăn của những người bản địa coi họ là kỳ quặc và đa dạng ở khía cạnh nào đó đã làm chậm lịch sử vì thế giới thực sự , thế giới của chúng ta , vẫn tiếp tục vận động .
+Vâng , sự thật là thế kỷ 20 , 300 năm nữa , sẽ không được nhớ đến vì các cuộc chiến tranh hay những cuộc cách mạng công nghệ , kỷ nguyên mà chúng ta đã sống , dù chủ động tham gia hoặc chấp nhận một cách bị động , sẽ được nhớ đến với sự mất mát to lớn của cả sự đa dạng sinh học lẫn đa dạng văn hóa trên hành tinh này . đến nay , vấn đề vẫn chưa được thay đổi .
+tất cả các nền văn hóa trải qua thời gian đều tham gia vào điệu nhảy với nhiều triển vọng của cuộc sống .
+và vấn đề không phải là công nghệ .
+những người Ấn Độ Sioux vẫn là người Sioux khi họ từ bỏ cung tên cũng giống như người Mỹ vẫn là người Mỹ ngay cả khi anh ta từ bỏ ngựa và xe độc mã .
+thay đổi hay công nghệ không đe dọa đến sự hợp nhất của sinh quyển dân tộc . đó là quyền lực .
+bộ mặt trần trụi của sự thống trị .
+và khi bạn nhìn khắp thế giới , bạn nhận ra rằng đó không phải là những nên văn hóa sinh ra để biết mất .
+đó là những con người đang sống nhưng bị làm cho không còn tồn tại bởi những lực lượng có thể nhận biết mà nằm ngoài giới hạn thích nghi của họ .
+đó có thể là sự tàn phá rừng quá mức ở quê hương của những người Penan - - một bộ tộc du mục ở Đông Nam Á , từ Sarawak - - một bộ tộc sống tự do trong những khu rừng mãi tới một thế hệ trước , giờ đây phải chịu cảnh làm nô lệ và bán dâm trên bờ sông , nơi bạn có thể thấy con sông đang trở nên bẩn thỉu vì nghẽn bùn điều đó có vẻ như đã mang một nửa bộ tộc Borneo đến biển Nam Hải Trung Quốc , nơi những tàu chở hàng Nhật Bản đã chờ sẵn để xếp những khúc gỗ thô mới đốn hạ từ rừng vào kho hàng .
+hay trong trường hợp của bộ tộc Yanomami , dịch bệnh xuất hiện , cùng với việc phát hiện ra vàng .
+hay nếu chúng ta đến với vùng núi Tibet , nơi tôi đã thực hiện rất nhiều nghiên cứu trong thời gian gần đây , bạn sẽ thấy một bộ mặt trần trụi của sự thống trị chính trị .
+như bạn biết , sự diệt chủng , xóa sổ hoàn toàn một dân tộc về mặt sinh học bị lên án trên toàn thế giới , nhưng việc xóa sổ một dân tộc , bằng cách phá hủy cách sống của con người , lại không bị kết án , mà thậm chí còn được hoan nghênh như một phần của chiến lược phát triển .
+và bạn sẽ không thể hiểu nổi nỗi đau của người Tibet cho đến khi bạn trải qua nó dưới lòng đất .
+tôi đã từng đi 6.000 từ Thành Đô phía Tây Trung Quốc qua Đông Nam Tibet tới Lhasa với một đồng nghiệp trẻ , và chỉ khi tới Lhasa tôi mới hiểu sự thật đằng sau những con số thống kê mà các bạn vẫn hay nghe .
+6.000 điểm kỷ niệm đã biến thành tro bụi .
+1,2 triệu người đã chết trong chiến tranh giai đoạn Cải cách Văn hóa .
+bố của người thanh niên này đã bị cho là Ban Thiền Lạt Ma .
+điều đó có nghĩa rằng ông bị giết ngay tức khắc ngay khi Trung Quốc xâm lược .
+chú của anh bỏ chạy cùng sự tôn thờ của cộng đồng Do Thái đưa cả dân tộc tới Nepal .
+mẹ anh đã bị tống giam như một cái giá - - phải trả cho tội giàu có .
+bản thân anh cũng bị tống vào ngục khi mới chỉ 2 tuổi và phải ấn nấp dưới đuôi váy của chị gái bởi vì chị không thể chịu được cảnh sống mà không có anh .
+người chị gái có việc làm dũng cảm ấy đã bị tống vào trại cải tạo .
+một ngày kia cô vô tình dẫm phải băng tay của Mao Trạch Đông , và vì sự vi phạm đó , cô phải chịu án 7 năm khổ sai .
+nỗi đau của những người Tibet là không thể chịu đựng được , nhưng tinh thần bất khuất của họ thất đáng chú ý .
+và cuối cùng , nó dẫn đến một lựa chọn .
+chúng ta muốn sống trong một thế giới đơn sắc buồn tẻ hay muốn hòa mình trong một thế giới đa dạng , đa sắc màu ?
+Maragret Mead , nhà nhân chủng học vĩ đại , trước khi chết đã từng nói rằng sự sợ hãi lớn nhất của bà là khi chúng ta tiến tới thế giới quan vô định này chúng ta không chỉ thấy toàn bộ óc tưởng tượng của con người đã thu hẹp tới một mức tư duy nhỏ hẹp hơn , mà còn thấy chúng ta tỉnh dậy sau một giấc mơ hoàn toàn quên rằng còn có những khả năng khác .
+và thật xấu hổ khi nhớ rằng giống loài của chúng ta , có lẽ , đã tồn tại 600.000 năm .
+cách mạng đồ đá đã mang lại cho chúng ta nông nghiệp , cũng là lúc chúng ta phụ thuộc vào hạt giống , bài thơ của những pháp sư đã được thay thế bởi bài cúng tế của những thầy tu tế , chúng ta đã tạo ra sự chênh lệch giai cấp - - từ cách đây 10.000 năm .
+thế giới công nghiệp hiện đại như chúng ta biết cũng chỉ mới gần 300 tuổi .
+giờ đây , lịch sử nông cạn đó không hề cho tôi thấy rằng chúng ta có tất cả các câu trả lời cho mọi thử thách mà chúng ta sẽ gặp phải trong thiên niên kỷ này .
+khi hỏi những nền văn hóa của thế giới về ý nghĩa của loài người , họ sẽ trả lời với 10.000 giọng nói khác nhau .
+và trong bản hòa ca đó , tất cả chúng ta sẽ tái phát hiện khả năng tồn tại của mình ; một dòng giống hoàn toàn làm chủ ý thức , có nhận thức đầy đủ để bảo đảm rằng tất cả con người và thực vật sẽ tìm ra cách để phát triển . và có những khoảnh khắc tuyệt vời của sự lạc quan .
+đây là một bức ảnh tôi chụp ở điểm cực bắc Đảo Baffin khi tôi đang đi săn kỳ lân với một số người Inuit , và người đàn ông này , Olaya , đã kể cho tôi một câu chuyện tuyệt vời về ông nội ông .
+chính quyền Canada không phải lúc nào cũng tốt với người dân Inuit , và trong suốt những năm 1950 , để thiết lập sự thống trị , chúng ta đã ép họ vào những khu định cư .
+ông nội của người đàn ông này đã từ chối không đi .
+gia đình , vì muốn ông cùng đi , đã lấy tất cả vũ khí và dụng cụ của ông .
+bây giờ , chắc chắn các bạn phải hiểu rằng người Inuit không sợ cái lạnh ; họ lợi dụng nó .
+phần bánh trượt xe trượt tuyết của họ vốn được làm bằng cá bọc trong da tuần luộc caribou .
+do đó , ông của người đàn ông này không phải chịu sự đe dọa của đêm Bắc cực giá rét hay bão tuyết thổi qua .
+ông chỉ đơn giản là trượt ra ngoài , tụt chiếc quần da hải cẩu xuống và đại tiện vào tay . và khi đống phân bắt đầu đông lại , ông nặn nó thành hình một thanh gươm .
+ông nhổ một ít nước bọt vào cán con dao bằng phân và cuối cùng nó cũng đông cứng lại , ông xẻ thịt một con chó bằng con dao này .
+ông lột da con chó và làm một bộ yên cương , lấy xương con chó và tạo thành một chiếc xe trượt , đóng yên cương một con chó gần đấy , và biết mất khỏi tảng băng nổi , với con dao phân dắt ở thắt lưng .
+và đi khỏi mà không cần mang theo thứ gì . và điều này , theo nhiều cách khác nhau , là biểu tượng đấu tranh của người Inuit và tất cả những bộ tộc trên thế giới .
+vào tháng 4 năm 1999 , chính quyền Canada đã phải trao trả hoàn toàn quyền tự trị cho người Inuit trao cho họ diện tích đất lớn hơn California và Texas cộng lại .
+đó là quê hương mới của chúng ta . nó có tên gọi Nunavut .
+đó là một lãnh thổ độc lập . họ kiểm soát tất cả các nguồn tài nguyên khoáng sản .
+một ví dụ thú vị về cách một quốc gia có thể vươn tới - - tìm cách bồi thường cho người dân của họ .
+và cuối cùng , tôi nghĩ đã quá rõ ràng với ít nhất là tất cả chúng ta những người đến từ vùng xa xôi hẻo lánh trên hành tinh , để nhận ra rằng chúng không hề xa xôi hẻo lánh chút nào .
+đó là quê hương của một ai đó .
+họ đại diện cho một nhánh của trí tưởng tượng con người đã có từ rất lâu . và với tất cả chúng ta , ước mơ của những đứa trẻ này , cùng giống như ước mơ của những đứa con chúng ta , trở thành một phần của hy vọng Do đó , điều chúng tôi đang cố gắng làm trên kênh National Geographic , chỉ là , chúng tôi tin rằng các chính trị gia chẳng làm được gì cả .
+chúng tôi nghĩ rằng cuộc luận chiến - - Chúng tôi nghĩ rằng cuộc luận chiến không thuyết phục , nhưng chúng tôi nghĩ rằng kể chuyện có thể thay đổi thế giới , và chúng tôi có thể là những nhà kể chuyện hay nhất thế giới . chúng tôi có 35 triệu lượt truy cập trên website mỗi tháng .
+156 quốc gia tiếp sóng kênh truyền hình của chúng tôi .
+hàng triệu người đón đọc tạp chí của chúng tôi .
+và chúng tôi đang thực hiện một loạt chuyến đi tới sinh quyển dân tộc nơi chúng tôi mang các khán giả đến với những điều kỳ diệu của văn hóa mà họ không thể không ngạc nhiên bởi những gì họ thấy , và hy vọng rằng , do đó , dần dần hiểu rõ , từng bước , bản chất của nhân chủng học : rằng thế giới này xứng đáng tồn tại một cách đa dạng , rằng chúng ta cần tìm cách để sống trong một thế giới đa dạng đa văn hóa nơi trí tuệ của tất cả mọi người có thể cống hiến cho tập thể nhân loại chúng ta .
+xin cảm ơn rất nhiều .
+nắm ngoái , cũng tại đây tôi đã giới thiệu về LHC .
+và tôi cũng hứa sẽ trở lại và cung cấp cho các bạn các thông tin cập nhật về cách chiếc máy này hoạt động .
+vì vậy , đây chính là nó . cho những người không có mặt năm ngoái , thì LHC là thí nghiệm khoa học lớn nhất từng được thực hiện - - chu vi 27 Km .
+công việc của nó là tái tạo lại các điều kiện , đã có mặt ít hơn một phần tỷ của một giây sau khi vũ trụ bắt đầu - - lên tới 600 triệu lần một giây .
+đó là một tham vọng rất lớn .
+đây là chiếc máy nằm dưới thành phố Geneva , Thụy Sĩ .
+chúng tôi chụp các bức hình của các vụ nổ Big Bang nhỏ trong các thiết bị phân tích .
+tôi đang làm việc với chiếc máy này . nó có tên máy phân tích ATLAS - - rộng 44 mét , 22 mét đường kính .
+đây là một bưc ảnh hùng vĩ của ATLAS khi được xây dựng Vì vậy bạn có thể thấy quy mô của nó .
+vào ngày 10 tháng 9 năm ngoái chiếc máy được khởi động lần đầu tiên .
+và bưc hình này được chụp bởi ATLAS.
+nó là nguyên nhân cho một lễ kỷ niệm lớn trong phòng điều khiển .
+nó là tấm hình của chùm hạt đầu tiên đi hết một quãng đường quanh LHC , va chạm có tính toán với một phần của LHC , và phun chùm hạt vào trong máy phân tích .
+nói cách khác , khi chúng tôi thấy bức hình đó vào ngày 10 tháng 9 chúng tôi biết rằng chiếc máy đã hoạt động , đó là một thành tựu vĩ đại .
+tôi không biết liệu điều này đã nhận được sự cổ vũ lớn nhất , hay cái này , khi một ai đó vào Google và thấy trang đầu là như thế .
+nó có nghĩa là chúng tôi đã làm ảnh hưởng văn hóa cúng như tác động khoa học .
+khoảng 1 tuần sau đó chúng tôi đã có một vấn đề với chiếc máy , Liên quan tới các đoạn dây này - - những chiếc dây này làm bằng vàng .
+nó truyền dẫn dòng điện lên tới 13 nghìn amps khi chiếc máy làm việc hết công suất .
+bây giờ các kỹ sư trong số các bạn sẽ nhìn chúng và nói , " Chúng không thể làm được . chúng là các sợi dây quá nhỏ . "
+nhưng chúng có thể làm được bởi vì khi chúng ở nhiệt độ rất lạnh chúng hoạt động như các dây làm bằng vật liệu siêu dẫn .
+vì vậy tại nhiệt độ âm 271 độ , Lạnh hơn cả không gian giữa các ngôi sao , những chiếc dây đó có thể dẫn dòng lơn như vậy .
+trong một khớp nối giữa trên 90 ngàn nam châm trong LHC , đã có một lỗi sản xuất .
+vì vậy dây bị nóng lên một chút , và dòng 13 ngàn amps đột ngột gặp phải trở kháng điện .
+đây là hậu quả .
+bây giờ , sẽ ấn tượng hơn khi bạn để ý rằng những nam châm đó nặng trên 20 tấn , và chúng bị dịch đi khoảng 1 foot Vì vậy , chúng tôi bị thiệt hại khoảng 50 nam châm .
+chúng tôi đã phải đưa chúng ra .
+chúng tôi tu sửa chúng , cố định chúng .
+chúng đang được đưa trở lại đúng vị trí .
+đến cuối tháng ba LHC sẽ lại trở về nguyên vẹn .
+chúng tôi sẽ khởi động nó , và mong rằng có thể lấy dữ liệu trong tháng 6 hoặc 7 , và tiếp tục với việc điều tra của chúng tôi để tìm ra những khối nào tạo thành vũ trụ .
+dĩ nhiên hiện nay trong cách mà các tai nạn đó kích thích lại những cuộc tranh luận về giá trị của khoa học và kỹ thuật . thật dễ dàng để bác bỏ .
+theo tôi thực tế là nó quá khó , thực tế là chúng ta đang vượt quá xa , giá trị của những thứ như LHC.
+tôi sẽ để lại những lời cuối cùng cho một nhà khoa học người Anh , Humphrey Davy , tôi nghi ngờ , khi bảo vệ những thí nghiệm vô dụng của người được ông bảo trợ , người được ông bảo trợ đó là MIchael Faraday , đã nói rằng , " Không có gì là quá nguy hiểm cho sự tiến bộ của suy nghĩ con người hơn là cho rằng quan điểm của chúng ta về khoa học là tột bậc , rằng không còn bất kỳ sự huyền bí nào trong tự nhiên , rằng thắng lợi của chúng ta là hoàn thiện , và rằng
+không có thế giới mới để chinh phục . " cảm ơn .
+Vỗ tay Năm ngoái tôi đã trình chiếu 2 slides để minh họa cho chỏm băng Bắc Cực , là chỏm băng mà suốt 3 triệu năm qua từ kích cỡ bằng 48 bang nay nó đã giảm đi 40 % .
+nhưng điều này đã nói giảm đi sự nghiêm trọng của vấn đề vì nó không cho biết độ dày của lớp băng .
+một mặt , chỏm băng Bắc Cực là quả tim đập không ngừng của hệ thống khí hậu toàn cầu .
+nó mở rộng vào mùa đông và giảm đi vào mùa hè .
+slide tiếp theo mà tôi chiếu sẽ là những biến đổi cực nhanh của những điều đã xảy ra trong vòng 25 năm qua .
+vùng băng vĩnh cửu được đánh dấu bằng màu đỏ .
+như bạn thấy , nó mở rộng ra vùng màu xanh đậm .
+đó là băng hàng năm vào mùa đông .
+và nó giảm đi vào mùa hè .
+cái gọi là băng vĩnh cửu , có tuổi từ 5 năm trở lên , bạn có thể thấy chủ yếu như màu máu , tràn khắp vùng này .
+trong vòng 25 năm , nó đã từ như thế này trở thành như vậy .
+đây là vấn đề bởi sự nóng lên đã nung lớp đất nền đóng băng xung quanh Bắc Băng Dương nơi có một lượng carbon đóng băng khổng lồ mà khi tan ra , nó sẽ bị vi khuẩn biến thành metan .
+so với tổng lượng ô nhiễm trong không khí gây nên hiện tượng nóng lên toàn cầu , lượng này có thể tăng gấp đôi nếu chúng ta vượt qua ngưỡng bùng phát .
+ở một số hồ nông ở Alaska metan nổi thành các bóng khí trên mặt hồ .
+mùa đông năm ngoái , giáo sư Katey Walter từ Đại học Alaska đã cùng với một nhóm tới khảo sát ở hồ nông này .
+video : Whoa ! Al Gore : cô ta không bị gì cả . câu hỏi đặt ra là liệu chúng ta có như thế không .
+và một lý do là , lượng nhiệt khổng lồ này chìm xuống làm nóng đảo Greenland từ phía Bắc .
+đây là một con sông tạo nên do băng tan hàng năm .
+nhưng hiện nay lượng băng tan đã nhiều hơn bao giờ hết .
+đây là sông Kangerlussuaq ở Tây Nam Greenland .
+nếu bạn muốn biết mực nước biển dâng ra sao từ băng trên nền đất tan chảy thì đây là nơi nó chảy ra biển .
+những dòng chảy này đang ngày càng tăng nhanh hơn .
+ở cực khác của địa cầu , Nam Cực là nơi có lượng băng lớn nhất hành tinh .
+tháng trước , các nhà khoa học đã báo cáo rằng trên toàn lục địa này mức cân bằng của lượng băng hiện đang ở mức đáng lo ngại .
+và phía Tây Nam Cực với những hòn đảo ngầm hiện đang tan với tốc độ cực nhanh .
+bằng khoảng 20 feet so với mực nước biển , giống như Greenland .
+ở Himalayas , vùng băng lớn thứ ba thế giới , trên đỉnh này , bạn có thể thấy các hồ mới được tạo , mà cách đây vài năm , chúng vẫn là các sông băng .
+một nửa lượng nước mà 40 % dân cư trên thế giới đã uống là lấy từ con sông băng này .
+ở Andes , sông băng này là nguồn nước uống cho thành phố .
+lượng băng tan ngày càng tăng .
+nhưng khi chúng cạn kiệt , thì nước uống cũng không còn .
+ở California , núi băng Sierra đã giảm 40 % .
+nó đang biến thành các bể nước .
+và các dự báo , như các bạn đã đọc , rất nghiêm trọng .
+hạn hán khắp thế giới đã dẫn tới nạn cháy rừng tăng cao .
+và dịch bệnh hoành hành khắp thế giới đã tăng lên một cách chóng mặt với tốc độ chưa từng thấy .
+trong vòng 30 năm , nó đã tăng 4 lần so với 75 năm trước .
+đây là mô hình hoàn toàn không bền vững .
+nếu xem bối cảnh lịch dử bạn có thể thấy ý nghĩa của biểu đồ này .
+trong vòng năm năm qua mỗi 24 giờ , chúng ta lại thải thêm 70 triệu tấn CO2 - - 25 triệu tấn mỗi ngày bị thải ra đại dương .
+hãy nhìn kỹ vùng phía Đông của Thái Bình Dương , từ châu Mỹ , mở rộng về phía Tây , và trên mặt khác của tiểu lục địa Ấn , đây là nơi có lượng oxy trong đại dương bị giảm mạnh .
+nguyên nhân lớn nhất gây ra hiện tượng nóng lên toàn cầu , cùng với việc phá rừng - - chỉ bằng 20 % của nó , là việc đốt cháy nhiên liệu hóa thạch .
+dầu mỏ là một vấn đề , và than đá là vấn đề nghiêm trọng nhất .
+hoa Kỳ là một trong hai nơi xả thải mạnh nhất , cùng với Trung Quốc .
+và người ta kiến nghị nên xây thêm các nhà máy dùng than làm chất đốt .
+nhưng chúng ta đang bắt đầu thấy những biến đổi diễn ra trên biển .
+đây là những nhà máy bị ngừng hoạt động trong những năm vừa rồi bởi một số kiến nghị về môi trường .
+tuy nhiên ở nước ta xảy ra một cuộc chiến chính trị .
+và năm ngoái , ngành công nghiệp than và dầu mỏ tiêu tốn khoảng 1 / 4 tỷ dollar để quảng bá than sạch , mà thật ra chỉ là trò ghép hai chữ trái nghĩa .
+hình ảnh này khiến tôi nghĩ tới một thứ .
+khoảng thời gian Giáng Sinh , tại nhà tôi ở Tennessee , một tỉ gallon cặn than đã bị tràn ra .
+có thể các bạn đã xem tin đó trên báo .
+vụ tràn cặn này đã tạo nên bãi rác lớn thứ hai tại nước Mỹ .
+vụ này xảy ra gần Giáng Sinh .
+đây là một trong những quảng cáo cho ngành công nghiệp than đá vào mùa Giáng Sinh .
+video : ♪ ♫ Bác thợ mỏ vui vẻ yêu đời .
+nước Mỹ chúng ta có đầy người như bác thợ mỏ ấy và họ giúp nền kinh tế của chúng ta phát triển .
+bác thợ mỏ ngày càng sạch thêm .
+bác vừa rẻ vừa đáng yêu , bác nuôi sống các công nhân .
+Al Gore : đây là mỏ than lớn ở Tây Virginia .
+mỏ than trên núi lớn nhất là đỉnh mỏ Massey .
+video : ngài Blankenship : hãy giải thích cho tôi . Al Gore , Nancy Peloso , Harry Reid , họ không biết mình đang nói gì .
+Al Gore : vậy nên Liên Minh Bảo Vệ Khí Hậu đã bắt đầu hai cuộc vận động .
+đây là một trong hai cuộc vận động đó , một phần của cuộc vận động .
+video : diễn viên : tại COALergy chúng ta đã thấy khí hậu thay đổi một cách nghiêm trọng đe dọa công việc của chúng ta .
+đó là lý do tại sao chúng tôi đặt mục tiêu hàng đầu cho mình là tiêu một khoản tiền cực lớn cho nỗ lực quảng cáo để làm rõ sự thật về than .
+sự thật là , than không hề bẩn .
+chúng tôi cho là nó sạch - - và có vẻ tốt .
+do vậy bạn đừng lo lắng quá về biến đổi khí hậu .
+cứ để đấy cho chúng tôi .
+video : diễn viên : than sạch , bạn đã nghe rất nhiều về nó .
+ta hãy làm một tour để tìm hiểu về đỉnh cao nghệ thuật của công nghệ than sạch nhé .
+thật ngạc nhiên ! máy móc có vẻ ồn ào thật .
+nhưng đó là âm thanh của công nghệ than sạch .
+và mặc dù việc đốt than là một trong những nguyên nhân lớn nhất của hiện tượng nóng lên toàn cầu , thì công nghệ than sạch tuyệt vời mà bạn đang thấy đây đã thay đổi mọi thứ .
+các bạn hãy nhìn kỹ nhé , đây là công nghệ than sạch ngày nay .
+Al Gore : cuối cùng , thay đổi tích cực khớp với những thử thách về kinh tế và an ninh quốc gia của chúng ta .
+video : người dẫn : nước Mỹ đang khủng hoảng về nền kinh tế , an ninh quốc gia , về khí hậu .
+mối đe dọa của tất cả là sự gia tăng lượng carbon từ nhiên liệu , chẳng hạn như than bẩn và dầu ngoại .
+nhưng giờ đây , đã có một giải pháp mới để giúp chúng ta thoát khỏi rắc rối đó .
+tái thiết năng lượng nước Mỹ với 100 % điện sạch , trong 10 năm .
+một kế hoạch đưa nước Mỹ năng động trở lại , giải quyết vấn đề an ninh , và nóng lên toàn cầu .
+cuối cùng , một giải pháp đủ lớn để giải quyết các vấn đề của chúng ta .
+tái thiết năng lượng nước Mỹ . hãy tìm hiểu thêm .
+Al Gore : đây là đoạn video cuối .
+video : người dẫn : đây là vấn đề tái thiết năng lượng cho nước Mỹ .
+một trong những cách nhanh chóng nhất là chấm dứt sự lệ thuộc vào nhiên liệu bẩn vốn đang xâm hại hành tinh chúng ta .
+tương lai vẫn ở phía trước . phong điện , năng lượng mặt trời , cả một mạng lưới mới .
+có những đầu tư mới để tạo ra các công việc lương cao .
+người dẫn : tái thiết năng lượng cho nước Mỹ . đã đến lúc thành sự thật .
+Al Gore : người châu Phi có một câu ngạn ngữ , " Nếu muốn đi nhanh , bạn hãy đi một mình .
+nếu muốn đi được xa , hãy đi cùng nhau . "
+chúng ta cần phải đi xa , nhanh chóng .
