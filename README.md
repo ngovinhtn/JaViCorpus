@@ -20,7 +20,7 @@ Notes on those updated corpora:
 
 ## License and copyright notices:
 
- These datasets are followed policies from their original source such as TED Talks (at https://www.ted.com/), Globse (at https://glosbe.com/), and so on. They are **only used for research purposes and non-commercial**.
+ These datasets are followed policies from their original source such as TED Talks (at https://www.ted.com/), Globse (at https://glosbe.com/), and so on. They are **only used for research purposes and do not allow for any commercial usage**.
 
 ## How to cite
 
