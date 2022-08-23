@@ -18,6 +18,9 @@ Notes on those updated corpora:
 *  QED is a good corpus, similar to TED (but currently bigger), however its sentence-alignment is not perfect.
 *  JW300 and Open Subtitles should not be used in MT without applying a proper data selection method.
 
+## License and copyright notices:
+
+ These datasets are followed policies from their original source such as TED Talks (at https://www.ted.com/), Globse (at https://glosbe.com/), and so on. They are **only used for research purposes and non-commercial**.
 
 ## How to cite
 
@@ -51,7 +54,3 @@ Conference on Knowledge and Systems Engineering (KSE 2018)}},
   url       = {https://arxiv.org/pdf/1805.07133.pdf}
 }
 ```
-
-# License and copyright notices:
-
- ## These datasets are followed policies of original source such as TED Talks (at https://www.ted.com/) and Globse (at https://glosbe.com/). They are **only used for research purposes and non-commercial**.
