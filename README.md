@@ -51,3 +51,7 @@ Conference on Knowledge and Systems Engineering (KSE 2018)}},
   url       = {https://arxiv.org/pdf/1805.07133.pdf}
 }
 ```
+
+# License and copyright notices:
+
+ ## These datasets are followed policies of original source such as TED Talks (at https://www.ted.com/) and Globse (at https://glosbe.com/). They are **only used for research purposes and non-commercial**.
